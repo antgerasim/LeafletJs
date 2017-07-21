@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "delNo": "П0001",
+    "currency": 810,
+    "sum": 40000,
+    "supplierInn": 123456789012,
+    "supplierId": 1
+  },
+  {
+    "id": 2,
+    "delNo": "П0002",
+    "currency": 840,
+    "sum": 1200,
+    "supplierInn": 123456789012,
+    "supplierId": 1
+  },
+  {
+    "id": 3,
+    "delNo": "П0003",
+    "currency": 810,
+    "sum": 1000,
+    "supplierInn": 123456789012,
+    "supplierId": 1
+  },
+  {
+    "id": 4,
+    "delNo": "i1-1",
+    "currency": 810,
+    "sum": 23000,
+    "supplierInn": 12345678,
+    "supplierId": 2
+  },
+  {
+    "id": 5,
+    "delNo": "i1-2",
+    "currency": 840,
+    "sum": 890,
+    "supplierInn": 12345678,
+    "supplierId": 2
+  }
+]

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeafletJs - Training</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css"
+          integrity="sha512-wcw6ts8Anuw10Mzh9Ytw4pylW8+NAD4ch3lqm9lzAsTxg0GFeJgoAtxuCLREZSC5lUXdVyo/7yfsqFjQ4S+aKw=="
+          crossorigin=""/>
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"
+            integrity="sha512-mNqn2Wg7tSToJhvHcqfzLMU6J4mkOImSPTxVZAdo+lcPlk+GhZmYgACEe0x35K7YzW1zJ7XyJV/TT1MrdXvMcA=="
+            crossorigin="">
+    </script>
+
+    <script type="text/javascript">
+        angular.module('donApp', ['ui.router'])
+            .config(function ($stateProvider, $urlRouterProvider) {
+
+                $urlRouterProvider.otherwise('/start');
+
+                $stateProvider
+                    .state('404', {
+                        url: '/',
+                        templateUrl: '/views/errors/404.html'
+                    })
+                    .state('start', {
+                        url: '/start',
+                        templateUrl: '/views/start.html'
+                    })
+                    .state('beginning', {
+                        url: '/beginning',
+                        templateUrl: '/views/beginning.html'
+                    })
+                    .state('training', {
+                        url: '/training',
+                        templateUrl: '/views/training.html'
+                    })
+                    .state('quickStartGuide', {
+                        url: '/quickStartGuide',
+                        templateUrl: '/views/quickStartGuide.html',
+                        controller: 'quickStartGuideCtrl'
+                    })
+                    .state('markersCustomIcons', {
+                        url: '/markersCustomIcons',
+                        templateUrl: '/views/markersCustomIcons.html',
+                        controller: 'markersCustomIconsCtrl'
+                    })
+                    .state('geoJson', {
+                        url: '/geoJson',
+                        templateUrl: '/views/geoJson.html',
+                        controller: 'geoJsonCtrl'
+                    })
+                    .state('moscowMap', {
+                        url: '/moscowMap',
+                        templateUrl: '/views/moscowMap.html',
+                        controller: 'moscowMapCtrl'
+                    })
+
+
+            })
+    </script>
+    <script src="data/sample-geojson.js"></script>
+    <script src="javascripts/controllers/geoJsonCtrl.js"></script>
+    <script src="javascripts/controllers/quickStartGuideCtrl.js"></script>
+    <script src="javascripts/controllers/markersCustomIconsCtrl.js"></script>
+    <script src="javascripts/controllers/moscowMapCtrl.js"></script>
+
+
+
+</head>
+<body ng-app="donApp">
+<div ui-view></div>
+</body>
+</html>
