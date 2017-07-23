@@ -1,0 +1,37 @@
+
+<h2>{{ctrl.title}}</h2>
+
+<!--<div onload="app.map=app.init();app.mapIt(true, false);" cz-shortcut-listen="true">-->
+<div onload="app.map=app.init();app.mapIt(true, false);" cz-shortcut-listen="true">
+<div id="head">
+    <div class="wrapper">
+    </div>
+</div>
+<div id="ribbon">
+    <div class="wrapper">
+        <a href="http://github.com/arthur-e/Wicket">
+            <div id="forkme">&nbsp;
+            </div>
+        </a>
+        <div id="canvas" class="leaflet-container leaflet-fade-anim" tabindex="0" style="position: relative;">
+            <div class="leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img class="leaflet-tile leaflet-tile-loaded" src="http://d.tile.stamen.com/toner/2/2/1.png" style="height: 256px; width: 256px; left: 292px; top: 52px;"><img class="leaflet-tile leaflet-tile-loaded" src="http://c.tile.stamen.com/toner/2/1/1.png" style="height: 256px; width: 256px; left: 36px; top: 52px;"><img class="leaflet-tile leaflet-tile-loaded" src="http://c.tile.stamen.com/toner/2/2/0.png" style="height: 256px; width: 256px; left: 292px; top: -204px;"><img class="leaflet-tile leaflet-tile-loaded" src="http://b.tile.stamen.com/toner/2/1/0.png" style="height: 256px; width: 256px; left: 36px; top: -204px;"><img class="leaflet-tile leaflet-tile-loaded" src="http://d.tile.stamen.com/toner/2/1/2.png" style="height: 256px; width: 256px; left: 36px; top: 308px;"><img class="leaflet-tile leaflet-tile-loaded" src="http://a.tile.stamen.com/toner/2/2/2.png" style="height: 256px; width: 256px; left: 292px; top: 308px;"><img class="leaflet-tile leaflet-tile-loaded" src="http://b.tile.stamen.com/toner/2/0/1.png" style="height: 256px; width: 256px; left: -220px; top: 52px;"><img class="leaflet-tile leaflet-tile-loaded" src="http://a.tile.stamen.com/toner/2/3/1.png" style="height: 256px; width: 256px; left: 548px; top: 52px;"><img class="leaflet-tile leaflet-tile-loaded" src="http://c.tile.stamen.com/toner/2/0/2.png" style="height: 256px; width: 256px; left: -220px; top: 308px;"><img class="leaflet-tile leaflet-tile-loaded" src="http://a.tile.stamen.com/toner/2/0/0.png" style="height: 256px; width: 256px; left: -220px; top: -204px;"><img class="leaflet-tile leaflet-tile-loaded" src="http://d.tile.stamen.com/toner/2/3/0.png" style="height: 256px; width: 256px; left: 548px; top: -204px;"><img class="leaflet-tile leaflet-tile-loaded" src="http://b.tile.stamen.com/toner/2/3/2.png" style="height: 256px; width: 256px; left: 548px; top: 308px;"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"><svg class="leaflet-zoom-animated" width="1333" height="1068" viewBox="-318 -254 1333 1068" style="transform: translate3d(-318px, -254px, 0px);"><g><path stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd" stroke="#AA0000" stroke-opacity="1" stroke-width="3" fill="#AA0000" fill-opacity="0.2" class="leaflet-clickable" d="M406 184L349 164L420 218z"></path></g><g><path stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd" stroke="#AA0000" stroke-opacity="1" stroke-width="3" fill="#AA0000" fill-opacity="0.2" class="leaflet-clickable" d="M349 202L320 218L320 279L377 294L420 250zM377 250L349 265L349 235z"></path></g></svg></div><div class="leaflet-marker-pane"></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="#" title="Zoom in">+</a><a class="leaflet-control-zoom-out" href="#" title="Zoom out">-</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> | Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> — Map data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a></div></div></div></div>
+        <div id="controls">
+            <div class="title">
+                <div class="brand">Wicket</div>
+            </div>
+            <div class="text">
+                Wicket is a lightweight Javascript library that reads and writes <a href="http://en.wikipedia.org/wiki/Well-known_text#Geometric_objects" target="_blaknk">Well-Known Text (WKT)</a> strings. It can also be extended to parse and to create geometric objects from various mapping frameworks, such as <a href="http://http://leafletjs.com/" target="_blank">Leaflet</a>, the ESRI ArcGIS JavaScript API, and the Google Maps API.
+            </div>
+            <div id="form">
+                <textarea type="text" name="wkt" id="wkt"></textarea>
+                <label><input type="checkbox" name="urlify" id="urlify" onchange="app.urlify(this.checked);">Format for URLs</label>
+                <input type="submit" id="submit" value="Map It!" onclick="app.clearMap();app.mapIt(true, true);">
+                <input type="reset" id="reset" value="Clear Map" onclick="app.clearText();app.clearMap();">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>

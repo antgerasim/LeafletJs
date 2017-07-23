@@ -12,40 +12,6 @@ var cors = require('cors');
 
 var app = express();
 
-//CORS
-var whitelist = [
-    'http://0.0.0.0:3000',
-];
-var corsOptions = {
-    origin: function(origin, callback){
-        var originIsWhitelisted = whitelist.indexOf(origin) !== -1;
-        callback(null, originIsWhitelisted);
-    },
-    credentials: true
-};
-//app.use(cors(corsOptions));
-
-//app.use(cors());
-//app.options('*', cors());//allow all routes cross origin requests
-
-app.use(function(req, res, next) {
-    //res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    res.setHeader("Access-Control-Allow-Origin", 'http://localhost:3000');
-    res.setHeader('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT,DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Accept');
-    next();
-});
-
-app.get('/', function(req, res, next) {
-    // Handle the get for this route
-});
-
-app.post('/', function(req, res, next) {
-    // Handle the post for this route
-});
-
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
